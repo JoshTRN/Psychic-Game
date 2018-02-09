@@ -34,10 +34,10 @@ document.onkeyup = function(event) {
       if (computerGuess === userGuess) {
       	wins++;
       	document.getElementById("Wins").innerHTML = "Wins: " + wins;
-      	document.getElementById("alreadyGuessed").innerHTML = "Your Guesses: "
+      	document.getElementById("alreadyGuessed").innerHTML = "Your Guesses: ";
       	guesses = '';
       	guessLeft = 9;
-      	document.getElementById("GuessLeft").innerHTML = "Guesses Left: " + guessLeft
+      	document.getElementById("GuessLeft").innerHTML = "Guesses Left: " + guessLeft;
 
 
       }
@@ -45,19 +45,17 @@ document.onkeyup = function(event) {
       else if ((computerGuess !== userGuess) && (guessLeft > 0)) {
       	guessLeft--;
       	document.getElementById("GuessLeft").innerHTML = "Guesses Left: " + guessLeft;
-      	guesses = guesses + userGuess + ", "
-      	console.log(guesses)
-      	document.getElementById("alreadyGuessed").innerHTML = "Your Guesses: " + guesses;
-      	console.log(document.getElementById("alreadyGuessed").innerHTML)    	
+      	guesses = guesses + userGuess + ", ";
+      	document.getElementById("alreadyGuessed").innerHTML = "Your Guesses: " + guesses;   	
       }
 
       else {
-      	losses++
-      	document.getElementById("Losses").innerHTML = "Losses: " + losses
+      	losses++;
+      	document.getElementById("Losses").innerHTML = "Losses: " + losses;
       	document.getElementById("alreadyGuessed").innerHTML = "Your Guesses: ";
-      	guessLeft = 9
-      	document.getElementById("GuessLeft").innerHTML = "Guesses Left: " + guessLeft
-      	guesses = ''
+      	guessLeft = 9;
+      	document.getElementById("GuessLeft").innerHTML = "Guesses Left: " + guessLeft;
+      	guesses = '';
       }
     };
 
